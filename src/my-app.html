@@ -33,12 +33,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       app-header {
-        padding-top: 10px;
+        padding-top: 1px;
         color: var(--app-secondary-color);
         background-color: var(--app-primary-color);
       }
+        
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
+      }
+        
+      app-toolbar {
+        height: 91px;
       }
 
       .drawer-list {
@@ -73,7 +78,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     .avatar-container .image {
-      background-image: url('//app-layout-assets.appspot.com/assets/pesto/avatar.jpg');
+      background-image: url('../images/avatar/avatar-2.png');
       background-size: contain;
       border-radius: 50%;
       height: 100%;
@@ -83,9 +88,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     .contact-info {
       margin: 0 20px;
       padding-bottom: 20px;
-      border-bottom: 1px solid #CCC;
       text-align: center;
     }
+        
+        .titulo{
+            position: absolute;
+             top: -10px;
+             bottom: 0;
+             left: 0;
+             right: 0;
+            -webkit-transform-origin: center top !important;
+            transform-origin: center top !important;
+            font-size: 42px;
+            text-align: center;
+        }
     </style>
 
     <app-location route="{{route}}"></app-location>
@@ -98,7 +114,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <app-drawer-layout fullbleed>    
       <!-- Drawer content -->
       <app-drawer>
-           <app-header fixed>
+           <app-header >
             <div class="avatar-container">
               <div class="image"></div>
             </div>
@@ -121,7 +137,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
           </app-toolbar>
           <app-toolbar>
-            <div>MEMOKA</div>
+            <div class="titulo">MEMOKA</div>
           </app-toolbar>
         </app-header>
         <iron-pages
